@@ -1,0 +1,16 @@
+name: ci-workflows
+on: 
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs:
+  build_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome steps
+        run: echo "welcome to GH actions"
+      - name: Checkout Repository 
+        uses: actions/checkout@v4  
